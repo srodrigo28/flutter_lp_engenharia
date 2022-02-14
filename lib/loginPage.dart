@@ -8,8 +8,8 @@ class LoginPage extends StatelessWidget {
         body: ListView(
       children: [
         Container(
-          width: double.infinity,
-          height: 667,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           color: Colors.white,
           padding: const EdgeInsets.only(
             bottom: 13,
@@ -18,13 +18,18 @@ class LoginPage extends StatelessWidget {
             children: [
               Container(
                 width: double.infinity,
-                height: 20,
+                height: 52,
                 color: const Color(0xffbd3804),
               ),
-              const SizedBox(height: 5.0),
+              const SizedBox(height: 50.0),
               Container(
                 width: double.infinity,
-                height: 100,
+                height: 170,
+                child: Image.asset('assets/images/logo.png'),
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: 20,
                 child: Column(
                   children: const [
                     SizedBox(height: 12),
@@ -32,12 +37,6 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15.38),
-              const SizedBox(
-                width: double.infinity,
-                height: 176,
-                child: FlutterLogo(size: 176),
-              ),
-              SizedBox(height: 15.38),
               const Text(
                 "Login",
                 style: TextStyle(
@@ -46,7 +45,7 @@ class LoginPage extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                 ),
               ),
-              SizedBox(height: 15.38),
+              const SizedBox(height: 15.38),
               const Text(
                 "Usuário",
                 style: TextStyle(
@@ -54,14 +53,14 @@ class LoginPage extends StatelessWidget {
                   fontSize: 15,
                 ),
               ),
-              SizedBox(height: 15.38),
+              const SizedBox(height: 15.38),
               Container(
                 width: 343,
                 height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(23),
                   border: Border.all(
-                    color: Color(0xffbd3804),
+                    color: const Color(0xffbd3804),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -71,33 +70,25 @@ class LoginPage extends StatelessWidget {
                   right: 155,
                 ),
                 child: Row(
-                  children: const [
-                    Text(
-                      "lucas",
-                      style: TextStyle(
-                        color: Color(0xffbd3804),
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
                 ),
               ),
-              SizedBox(height: 15.38),
+              const SizedBox(height: 15.38),
               const Text(
                 "Senha",
                 style: TextStyle(
                   color: Color(0xffbd3804),
                   fontSize: 15,
+
                 ),
               ),
-              SizedBox(height: 15.38),
+              const SizedBox(height: 15.38),
               Container(
                 width: 343,
                 height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(23),
                   border: Border.all(
-                    color: Color(0xffbd3804),
+                    color: const Color(0xffbd3804),
                     width: 1,
                   ),
                   color: Colors.white,
@@ -107,24 +98,26 @@ class LoginPage extends StatelessWidget {
                   right: 98,
                 ),
                 child: Row(
-                  children: const [
-                    Text(
-                      "***********************",
-                      style: TextStyle(
-                        color: Color(0xffbd3804),
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
                 ),
               ),
-              SizedBox(height: 15.38),
+              const SizedBox(height: 15.38),
               SizedBox(
                 width: 340,
                 height: 45,
                 child: Row(
                   children: [
-                    ElevatedButton(child: Text('Entrar'), onPressed: () {})
+                    ElevatedButton(
+                        onPressed: (){},
+                        child: const Text('Entrar'),
+                        style: ElevatedButton.styleFrom(
+                          primary: const Color(0xffbd3804),
+                          minimumSize: const Size(340,50),
+                          animationDuration: const Duration(seconds: 1),
+                          shape: const StadiumBorder(),
+
+                        ),
+
+                    )
                   ],
                 ),
               ),
