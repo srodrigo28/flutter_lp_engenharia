@@ -5,8 +5,11 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-          width: 375,
+        body: ListView(
+      scrollDirection: Axis.vertical,
+      children: [
+        Container(
+          width: 275,
           height: 667,
           color: Colors.white,
           padding: const EdgeInsets.only(
@@ -18,13 +21,13 @@ class LoginPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                width: 375,
-                height: 52,
+                width: 275,
+                height: 20,
                 color: const Color(0xffbd3804),
               ),
-              const SizedBox(height: 15.38),
+              const SizedBox(height: 5.0),
               Container(
-                width: 375,
+                width: 275,
                 height: 80,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -38,8 +41,8 @@ class LoginPage extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             "9:41",
                             textAlign: TextAlign.center,
                             style: TextStyle(
@@ -49,21 +52,13 @@ class LoginPage extends StatelessWidget {
                               fontWeight: FontWeight.w800,
                             ),
                           ),
-                          const SizedBox(width: 281),
-                          Container(
-                            width: 24,
-                            height: 12,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: const FlutterLogo(size: 12),
-                          ),
+                          SizedBox(width: 281),
                         ],
                       ),
                     ),
                     const SizedBox(height: 12),
                     Container(
-                      width: 375,
+                      width: 275,
                       height: 44,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
@@ -75,7 +70,7 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 15.38),
               Container(
-                width: 375,
+                width: 275,
                 height: 176,
                 child: const FlutterLogo(size: 176),
               ),
@@ -90,7 +85,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 15.38),
-              Text(
+              const Text(
                 "Usuário",
                 style: TextStyle(
                   color: Color(0xffbd3804),
@@ -117,7 +112,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       "lucas",
                       style: TextStyle(
@@ -129,7 +124,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 15.38),
-              Text(
+              const Text(
                 "Senha",
                 style: TextStyle(
                   color: Color(0xffbd3804),
@@ -156,7 +151,7 @@ class LoginPage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text(
                       "***********************",
                       style: TextStyle(
@@ -181,7 +176,7 @@ class LoginPage extends StatelessWidget {
                       height: 45,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(36),
-                        color: Color(0xffbd3804),
+                        color: const Color(0xffbd3804),
                       ),
                       padding: const EdgeInsets.only(
                         left: 135,
@@ -191,7 +186,7 @@ class LoginPage extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
+                        children: const [
                           SizedBox(
                             width: 71.38,
                             height: 21.04,
@@ -214,6 +209,8 @@ class LoginPage extends StatelessWidget {
               ),
             ],
           ),
-        ));
+        ),
+      ],
+    ));
   }
 }
