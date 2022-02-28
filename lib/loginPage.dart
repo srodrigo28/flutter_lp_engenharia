@@ -22,6 +22,7 @@ class LoginPage extends StatelessWidget {
                 color: const Color(0xffbd3804),
               ),
               const SizedBox(height: 50.0),
+              // ignore: sized_box_for_whitespace
               Container(
                 width: double.infinity,
                 height: 170,
